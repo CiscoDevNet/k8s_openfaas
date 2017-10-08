@@ -18,13 +18,14 @@ git clone https://github.com/openfaas/faas-netes
 
 cd faas-netes
 
-sleep 5
 echo "Initiating helm"
+sleep 5s
 helm init --skip-refresh --upgrade --service-account tiller
 
 echo "Installing OpenFaaS using the OpenFaaS Helm Chart"
+sleep 5s
 helm upgrade --install --debug --reset-values --set async=true openfaas openfaas
 
 echo "Installing sample functions for OpenFaaS"
-sleep 10
+sleep 10s
 faas-cli deploy -f https://raw.githubusercontent.com/openfaas/faas-cli/master/samples.yml --gateway http://127.0.0.1:31112
