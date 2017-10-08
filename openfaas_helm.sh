@@ -25,5 +25,6 @@ helm init --skip-refresh --upgrade --service-account tiller
 echo "Installing OpenFaaS using the OpenFaaS Helm Chart"
 helm upgrade --install --debug --reset-values --set async=true openfaas openfaas
 
+sleep 5
 echo "Installing sample functions for OpenFaaS"
 faas-cli deploy -f https://raw.githubusercontent.com/openfaas/faas-cli/master/samples.yml --gateway http://127.0.0.1:31112
