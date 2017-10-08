@@ -18,6 +18,7 @@ git clone https://github.com/openfaas/faas-netes
 
 cd faas-netes
 
+sleep 5
 echo "Initiating helm"
 helm init --skip-refresh --upgrade --service-account tiller
 
