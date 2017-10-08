@@ -28,4 +28,4 @@ helm upgrade --install --debug --reset-values --set async=true openfaas openfaas
 
 echo "Installing sample functions for OpenFaaS"
 sleep 10s
-faas-cli deploy -f https://raw.githubusercontent.com/openfaas/faas-cli/master/samples.yml --gateway http://127.0.0.1:31112
+faas-cli deploy -f https://raw.githubusercontent.com/openfaas/faas-cli/master/samples.yml --gateway http://10.10.20.1:31112
