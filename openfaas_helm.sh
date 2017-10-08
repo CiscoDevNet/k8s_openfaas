@@ -4,13 +4,13 @@ echo "Installing OpenFaaS CLI program"
 curl -sSL https://cli.openfaas.com | sudo sh
 
 echo "Installing Helm, package manager for k8s"
-curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh \
-chmod +x get_helm.sh \
+curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
+chmod +x get_helm.sh
 ./get_helm.sh
 
 echo "Create RBAC permissions for Tiller"
-kubectl -n kube-system create sa tiller \
- && kubectl create clusterrolebinding tiller \
+kubectl -n kube-system create sa tiller
+kubectl create clusterrolebinding tiller \
   --clusterrole cluster-admin \
   --serviceaccount=kube-system:tiller
 
