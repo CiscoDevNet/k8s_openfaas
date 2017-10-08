@@ -17,6 +17,7 @@ kubectl create clusterrolebinding tiller \
 git clone https://github.com/openfaas/faas-netes
 
 cd faas-netes
+pwd
 
 echo "Initiating helm"
 sleep 5s
