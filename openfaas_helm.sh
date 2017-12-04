@@ -24,7 +24,7 @@ sleep 5s
 helm init --skip-refresh --upgrade --service-account tiller
 
 echo "Installing OpenFaaS using the OpenFaaS Helm Chart"
-sleep 5s
+sleep 20s
 helm upgrade --install --debug --reset-values --set async=true openfaas openfaas
 
 # echo "Installing sample functions for OpenFaaS"
